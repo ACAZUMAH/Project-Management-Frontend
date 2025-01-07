@@ -17,7 +17,7 @@ const ClientInfo = (props) => {
             </li>
         </ul>
     </React.Fragment>
-  )
-}
+  );
+};
 
-export default ClientInfo
+export default ClientInfo;

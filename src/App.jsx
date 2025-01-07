@@ -3,9 +3,9 @@ import { Fragment } from "react";
 import { ApolloProvider } from "@apollo/client";
 import client from "./graphql/apolloClient";
 import Header from "./components/header";
-import Home from "./components/pages/home";
-import Project from "./components/pages/project";
-import NotFound from "./components/pages/notFound";
+import Home from "./pages/home";
+import Project from "./pages/project";
+import NotFound from "./pages/notFound";
 
 const App = () => {
   return (

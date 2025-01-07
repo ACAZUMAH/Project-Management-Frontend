@@ -1,8 +1,10 @@
 import React from "react";
 import { Link, useParams } from "react-router-dom";
 import useFetchProject from "./hook/useFeatchQuery";
-import Spinner from "../clients/spinner";
-import ClientInfo from "../clients/clientInfo";
+import Spinner from "../components/Ui/spinner";
+import ClientInfo from "../components/clients/clientInfo";
+import DeleteProjectButton from "../components/projects/deleteProjectBtn";
+import UpdateProjectForm from "../components/projects/updateProjectForm";
 
 const Project = () => {
   const { id } = useParams();
@@ -11,7 +13,7 @@ const Project = () => {
 
   if (loading) return <Spinner />;
 
-  if (error) return <p>Something went wrong</p>;
+  if (error) return <p>Something went wrong...</p>;
 
   return (
     <React.Fragment>
@@ -28,6 +30,8 @@ const Project = () => {
           <h5 className="mt-2">Project status</h5>
           <p className="lead">{ project.status }</p>
           <ClientInfo client={client}/>
+          <UpdateProjectForm project={project}/>
+          <DeleteProjectButton projectId={id}/>
         </div>
       )}
     </React.Fragment>

@@ -1,8 +1,8 @@
 import { Fragment } from "react";
-import AddClient from "../Modals/createClient";
-import AddNewProject from "../Modals/createProject";
-import Project from "../projects";
-import Clients from "../clients/clients";
+import AddClient from "../components/Modals/createClient/index";
+import AddNewProject from "../components/Modals/createProject";
+import Projects from "../components/projects/index";
+import Clients from "../components/clients/clients";
 
 const Home = () => {
   return (
@@ -11,7 +11,7 @@ const Home = () => {
         <AddClient />
         <AddNewProject />
       </div>
-      <Project />
+      <Projects />
       <hr />
       <Clients />
     </Fragment>

@@ -15,7 +15,7 @@ const useDeleteClientMutaion = () => {
     const [deleteClientMutaion, { loading, error }] = useMutation(
       deleteClientGql,
       {
-        refetchQueries: ["GetClients"],
+        refetchQueries: ["GetClients", "GetProjects"],
       }
     );
 

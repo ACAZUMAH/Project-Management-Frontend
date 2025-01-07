@@ -1,13 +1,13 @@
-import Spinner from "../clients/spinner";
+import Spinner from "../Ui/spinner";
 import ProjectCard from "./projectCard";
 import useFetchProjects from "./hooks/useFetchProjectsQuery";
 
-const Project = () => {
+const Projects = () => {
   const{ projects, loading, error } = useFetchProjects();
 
   if(loading) return <Spinner />;
 
-  if(error) return <p>Something went wrong</p>;
+  if(error) return <p>Something went wrong...</p>;
 
   if(projects.length === 0){
     return <p>No projects</p>
@@ -22,4 +22,4 @@ const Project = () => {
   )
 }
 
-export default Project;
+export default Projects;

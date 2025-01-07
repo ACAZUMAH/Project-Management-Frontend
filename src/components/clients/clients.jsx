@@ -1,7 +1,7 @@
 import React from 'react'
 import ClientRow from './client-row'
 import useClientsQuery from './Hooks/useClientsQuery'
-import Spinner from './spinner'
+import Spinner from '../Ui/spinner'
 
 const Clients = () => {
     const { clients, loading, error } = useClientsQuery();
